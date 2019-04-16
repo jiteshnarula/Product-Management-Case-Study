@@ -1,0 +1,98 @@
+
+<div>
+    <h2 class="text-center">Add New Product</h2>
+    
+      <form #addProduct="ngForm" >
+              <hr/>
+
+            <div class="row">
+                <div class="col-lg-3"></div>
+                  <label for="productid"><h4>ID:</h4></label>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-4">
+                 <div class="form-group">
+                    <input type="text" class="form-control" name="productid" 
+                    id="productid" #productid="ngModel"  ngModel
+                     placeholder="Enter Product ID" required  
+                     ngModel required  
+                      pattern="[0-9]{1,4}"/>
+                 </div>
+                 <div *ngIf="productid?.touched && productid?.invalid" class="alert alert-danger">
+                  <div *ngIf="productid.errors?.required">ID is required
+                  </div>
+                  <div *ngIf="productid.errors?.pattern">ID must be of maximum 4 digits
+                  </div>
+                </div>
+
+
+               </div>
+          </div>
+              
+
+
+        <div class="row">
+          <div class="col-lg-3"></div>
+            <label for="name"><h4>Name:</h4></label>
+            <div class="col-lg-1"></div>
+          <div class="col-lg-4">
+          <div class="form-group">
+              <input type="text" class="form-control" name="taskname" id="taskname" 
+               placeholder="Enter Product Name" 
+               #taskname="ngModel" ngModel required pattern="[A-Z][a-z]{3,}"/>
+            </div>
+            <div *ngIf="taskname?.touched && taskname?.invalid" class="alert alert-danger">
+              <div *ngIf="taskname.errors?.required">Name is required
+              </div>
+              <div *ngIf="taskname.errors?.pattern">Name must contain first letter as capital
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-3"></div>
+              <label for="description"><h4>Description:</h4></label>
+           <div class="col-lg-1"></div>
+            <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" name="description" 
+                id="description"  placeholder="Enter Product Description" ngModel
+                  #description="ngModel" required/>
+              </div>
+              <div *ngIf="description?.touched && description?.invalid" class="alert alert-danger">
+                <div *ngIf="description.errors?.required">Description is required
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="col-lg-3"></div>
+                <label for="price"><h4>Price:</h4></label>
+             <div class="col-lg-1"> </div>
+                <div class="col-lg-4">
+              <div class="form-group">
+                  <input type="text" class="form-control" name="price" id="price"
+                   placeholder="Enter Product Price" required pattern="[0-9]{1,}" #price = "ngModel" ngModel/>
+                </div>
+                <div *ngIf="price?.touched && price?.invalid" class="alert alert-danger">
+                  <div *ngIf="price.errors?.required">Price is  required
+                  </div>
+                  <div *ngIf="price.errors?.pattern">Please enter valid price
+                  </div>
+                </div>
+
+
+              </div>
+          </div>
+        <div class="row">
+          <div class="col-lg-5"></div>
+          <div class="col-lg-6">
+            <button type="submit" class="btn btn-primary " [disabled]="!addProduct.valid"   (click)="addProduct1(addProduct.value)">Submit</button>&nbsp;
+            <button type="button" class="btn btn-warning" [routerLink]="['/product-list']">Cancel</button>
+          </div>
+        </div>
+      </form>
+
+  </div> 

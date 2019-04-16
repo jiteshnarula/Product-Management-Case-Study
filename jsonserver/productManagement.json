@@ -1,0 +1,34 @@
+{
+  "productmanagement": [
+    {
+      "id": "1234",
+      "name": "Jitesh",
+      "description": "bsfdab",
+      "price": "1271"
+    },
+    {
+      "id": "5632",
+      "name": "Paras",
+      "description": "bdsh",
+      "price": "623"
+    },
+    {
+      "id": "7327",
+      "name": "Rish",
+      "description": "bfdshb",
+      "price": "7327"
+    },
+    {
+      "id": "123",
+      "name": "Dhdsbh",
+      "description": "bhj",
+      "price": "236"
+    },
+    {
+      "id": "1288",
+      "name": "Paras",
+      "description": "bjdfshab",
+      "price": "632"
+    }
+  ]
+}

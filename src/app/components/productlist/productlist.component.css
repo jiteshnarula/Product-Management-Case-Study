@@ -1,0 +1,19 @@
+table{
+    text-align: center
+}
+
+.addProduct{
+    text-align: center
+}
+
+ textarea{
+     min-height: 60px;
+     max-height: 100px;
+     
+ }
+
+ .textareaTD{
+    margin:0px;
+    padding:0px; 
+    border: none;
+ }
